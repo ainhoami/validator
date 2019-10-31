@@ -1,11 +1,20 @@
-import React from "react"
+import React from 'react';
+import { BrowserRouter as Router, Route} from "react-router-dom"
+import Thanks from "./ThankYou"
+import Form from "./Form"
 
-function App() {
+import '../styles/base.css';
+
+function App(props) {
   return (
-    <div>
-      <h1>Hello World</h1>
+    <Router>
+    <div className="container">
+      <Route exact path="/" component={Form}/>
+      <Route path="/thanks" component={Thanks}/>
+
     </div>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;
