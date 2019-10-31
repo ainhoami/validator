@@ -4,7 +4,7 @@ import validator from "validator"
 import Thanks from "./ThankYou"
 import "../styles/base.css"
 
-function Form() {  
+function Form(props) {  
   const [name, setName] = useState("")  
   const [nameError, setNameError] = useState("")  
   const [email, setEmail] = useState("")  
@@ -96,13 +96,10 @@ function handleSubmit(e){
     }
 
 
-// if (err==false)
-// {
-//     alert("sd")
-// return (
-//     <Redirect to="/thanks"/>
-//     )
-// }
+if (err==false)
+{
+    props.history.push("/thanks")
+}
 
 
 
